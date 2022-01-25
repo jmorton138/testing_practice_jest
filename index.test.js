@@ -2,6 +2,8 @@ const capitalize = require('./capitalize.js');
 const reverseString = require('./reverseString');
 const calculator = require('./calculator');
 const caesarCipher = require('./caesarCipher');
+const analyzeArray = require('./analyzeArray');
+
 
 test('capitalizes "string"', () => {
     expect(capitalize('string')).toBe('String');
@@ -48,5 +50,14 @@ test('Shifts "zzzz" to "aaaa" with shift of 1', () => {
 });
 
 test('Shifts "zZzz" to "aaaa" with shift of 2', () => {
-    expect(caesarCipher("zZzz", 2)).toBe("aaaa");
+    expect(caesarCipher("zZzz", 2)).toBe("bBbb");
+});
+
+test('returns object with average: 4, min: 1, max: 8, and length: 6', () => {
+    expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+      });
 });
