@@ -46,3 +46,7 @@ test('Shifts "Defend It!" to "Efgfoe Ju!" with shift of 1', () => {
 test('Shifts "zzzz" to "aaaa" with shift of 1', () => {
     expect(caesarCipher("zzzz", 1)).toBe("aaaa");
 });
+
+test('Shifts "zZzz" to "aaaa" with shift of 2', () => {
+    expect(caesarCipher("zZzz", 2)).toBe("aaaa");
+});
