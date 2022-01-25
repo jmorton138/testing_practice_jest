@@ -11,11 +11,15 @@ const caesarCipher = (string, shift) => {
     function shiftAscii(asciiArray, shift) {
         for (let i = 0; i < asciiArray.length; i++) {
             let shifted = asciiArray[i] + shift;
-            if (asciiArray[i] >= 32 && asciiArray[i] <= 64) {
+            if (shifted > 122) {
+                shifted = shifted - 26;
+            }
+            if (asciiArray[i] >= 91 && asciiArray[i] <= 96) {
+                continue;
+            } else if (asciiArray[i] >= 32 && asciiArray[i] <= 64) {
                 continue;
             } else {
                 asciiArray[i] =  shifted;
-
             }
         }
         return asciiArray
