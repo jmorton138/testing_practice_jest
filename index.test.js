@@ -1,6 +1,7 @@
 const capitalize = require('./capitalize.js');
 const reverseString = require('./reverseString');
 const calculator = require('./calculator');
+const caesarCipher = require('./caesarCipher');
 
 test('capitalizes "string"', () => {
     expect(capitalize('string')).toBe('String');
@@ -24,4 +25,8 @@ test('multiplies 6 by 4', () => {
 
 test('divides 15 by 3', () => {
     expect(calculator().divide(15, 3)).toBe(5);
+});
+
+test('Shifts "defend" to "efgfoe" with shift of 1', () => {
+    expect(caesarCipher("defend", 1)).toBe("efgfoe");
 });
