@@ -30,3 +30,11 @@ test('divides 15 by 3', () => {
 test('Shifts "defend" to "efgfoe" with shift of 1', () => {
     expect(caesarCipher("defend", 1)).toBe("efgfoe");
 });
+
+test('Shifts "defend it" to "efgfoe ju" with shift of 1', () => {
+    expect(caesarCipher("defend it", 1)).toBe("efgfoe ju");
+});
+
+test('Shifts "defend it!" to "efgfoe ju!" with shift of 1', () => {
+    expect(caesarCipher("defend it!", 1)).toBe("efgfoe ju!");
+});

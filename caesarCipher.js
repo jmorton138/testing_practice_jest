@@ -1,8 +1,4 @@
 const caesarCipher = (string, shift) => {
-    // function toArray(string) {
-    //     let array = string.split("");
-    //     return array;
-    // }
 
     function toAscii(string) {
         let asciiArray = [];
@@ -15,7 +11,12 @@ const caesarCipher = (string, shift) => {
     function shiftAscii(asciiArray, shift) {
         for (let i = 0; i < asciiArray.length; i++) {
             let shifted = asciiArray[i] + shift;
-            asciiArray[i] =  shifted;
+            if (asciiArray[i] >= 32 && asciiArray[i] <= 64) {
+                continue;
+            } else {
+                asciiArray[i] =  shifted;
+
+            }
         }
         return asciiArray
 
